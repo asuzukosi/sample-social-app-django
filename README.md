@@ -1,0 +1,1 @@
+This is the initial documentation of the social media project

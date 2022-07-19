@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for post in posts %}
+<div class="card mb-3" style="margin-top:10px; margin-left:30px; margin-right:30px">
+    <img src="media/{{ post.image }}" class="card-img-top" alt="{{post.image}}">
+    <div class="card-body">
+      <p class="card-text">{{post.caption}}</p>
+      <p class="card-text"><small class="text-muted">Last updated {{ post.created_at|timesince }} ago</small></p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock content %}
